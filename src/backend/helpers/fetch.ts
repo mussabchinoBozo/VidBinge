@@ -68,8 +68,7 @@ export async function singularProxiedFetch<T>(
     headers,
     onResponse(context) {
       const tokenHeader = context.response.headers.get("X-Token");
-      if (tokenHeader) setApiToken(tokenHeader);
-      ops.onResponse?.(context);
+      if (tokenHeader) setApiToken(tokenHeader)
     },
   });
 }
